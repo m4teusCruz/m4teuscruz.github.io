@@ -1,0 +1,400 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("jetbrains-mono-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("jetbrains-mono-500.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("jetbrains-mono-600.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("jetbrains-mono-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("jetbrains-mono-800.woff2") format("woff2");
+}
+
+:root {
+    --icy-blue: #ABD2FA;
+    --cornflower-blue: #7692FF;
+    --persian-blue: #1B2CC1;
+    --dusk-blue: #3D518C;
+    --deep-navy: #091540;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-synthesis: none;
+    font-size: 16px;
+    color: #ABD2FA;
+    background-color: #091540;
+    overflow-x: hidden;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+
+h1 {
+    font-size: 50px;
+    color: #7692FF;
+    -webkit-text-stroke: 2px #091540;
+    text-shadow: 4px 4px 0 #091540;
+}
+
+h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: #ABD2FA;
+}
+
+h3 {
+    font-size: 20px;
+    color: #1B2CC1;
+    margin-bottom: 10px;
+}
+
+p, li {
+    margin-bottom: 12px;
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.85;
+}
+
+.sobre-conteudo p {
+    margin: 0;
+}
+
+.sobre-conteudo strong {
+    color: #1B2CC1;
+    font-weight: 700;
+}
+
+section {
+    padding: 50px 12px;
+    scroll-margin-top: 90px;
+}
+
+/* Cabeçalho e menu */
+header {
+    background-color: #091540;
+    border-bottom: 3px solid #3D518C;
+}
+
+.navbar-brand {
+    color: #ABD2FA !important;
+}
+
+.nav-link {
+    color: #ABD2FA;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #7692FF !important;
+}
+
+.navbar-toggler {
+    background-color: #ABD2FA;
+}
+
+/* Painel de mangá */
+.painel {
+    height: 100%;
+    padding: 25px;
+    margin-bottom: 20px;
+    background-color: #ABD2FA;
+    background-image: none;
+    color: #091540;
+    border: 3px solid #7692FF;
+    box-shadow: 6px 6px 0 #3D518C;
+    position: relative;
+    z-index: 1;
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.painel img {
+    border: 2px solid #091540;
+    margin-bottom: 10px;
+}
+
+.painel img.foto {
+    border: none;
+    margin: 0;
+}
+
+.botao {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #7692FF;
+    color: #091540;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid #091540;
+    box-shadow: 4px 4px 0 #1B2CC1;
+}
+
+.botao:hover {
+    background-color: #ABD2FA;
+    color: #091540;
+}
+
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-habilidades h4 {
+    margin: 0 0 8px;
+    padding-bottom: 5px;
+    color: #1B2CC1;
+    border-bottom: 2px solid #ABD2FA;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.grade-habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.item-habilidade {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    min-height: 54px;
+    padding: 7px 8px;
+    color: #091540;
+    background: #ABD2FA;
+    border: 2px solid #ABD2FA;
+    box-shadow: 2px 2px 0 #7692FF;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.item-habilidade img {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+.item-habilidade span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Galeria de animes e mangás */
+.galeria-mangas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.galeria-mangas img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 !important;
+    border: 2px solid #091540;
+    background: #091540;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.galeria-mangas img:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0 #3D518C;
+}
+
+/* Stickers flutuantes */
+.stickers img,
+.stickers .s6 {
+    position: fixed !important;
+    width: 78px !important;
+    height: 78px !important;
+    object-fit: cover;
+    border: 3px solid #091540;
+    box-shadow: 4px 4px 0 #3D518C;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 0;
+    animation: flutuar 6s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.s1 { top: 14%; left: 2%; }
+.s2 { top: 34%; right: 2%; animation-delay: 1s; }
+.s3 { top: 56%; left: 1.5%; animation-delay: 2s; }
+.s4 { top: 75%; right: 2.5%; animation-delay: 3s; }
+.s5 { top: 88%; left: 3%; animation-delay: 4s; }
+.s6 { top: 52%; right: 2%; animation-delay: 2.5s; }
+.g1 { top: 35%; left: 2.5%; animation-delay: 0.5s; }
+.g2 { top: 14%; right: 3%; animation-delay: 1.5s; }
+.g3 { top: 73%; left: 2%; animation-delay: 3.5s; }
+.g4 { top: 86%; right: 2%; animation-delay: 4.5s; }
+.stickers img.gif-rosto { object-position: center 30%; }
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+
+.janela {
+    border: 3px solid #ABD2FA;
+    background-color: #ABD2FA;
+    color: #091540;
+    box-shadow: 8px 8px 0 #3D518C;
+    position: relative;
+    z-index: 1;
+}
+
+.janela-barra {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 12px;
+    font-weight: bold;
+    color: #ABD2FA;
+    background: linear-gradient(90deg, #1B2CC1, #3D518C, #7692FF);
+    border-bottom: 3px solid #091540;
+}
+
+.janela-corpo {
+    margin: 0;
+    padding: 30px 10px;
+}
+
+.vamos {
+    color: #091540;
+}
+
+.janela label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.logo-contato {
+    height: 68px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.botao-retro {
+    padding: 8px 16px;
+    background-color: #ABD2FA;
+    color: #091540;
+    font-weight: bold;
+    text-decoration: none;
+    border-top: 2px solid #ABD2FA;
+    border-left: 2px solid #ABD2FA;
+    border-right: 3px solid #091540;
+    border-bottom: 3px solid #091540;
+}
+
+.botao-retro:hover {
+    background-color: #7692FF;
+    color: #ABD2FA;
+}
+
+.fantasma {
+    display: block;
+    margin: 30px 0 0 auto;
+}
+
+footer {
+    background-color: #091540;
+    border-top: 3px solid #3D518C;
+    padding: 20px 10px;
+    text-align: center;
+    color: #ABD2FA;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+/* Celular */
+@media (max-width: 991px) {
+    h1 { font-size: 34px; }
+    .stickers img,
+    .stickers .s6 { width: 54px !important; height: 54px !important; opacity: 0.5; }
+}
+
+@media (max-width: 575px) {
+    .galeria-mangas { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px) {
+    .grade-habilidades { grid-template-columns: 1fr; }
+    .item-habilidade { min-height: 48px; }
+}
+
+
+.xadrez-imagem {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 14px 0 0 !important;
+    border: 2px solid #091540;
+    object-fit: contain;
+}
