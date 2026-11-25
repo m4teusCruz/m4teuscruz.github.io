@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Portfólio | Mateus Cruz</title>
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
@@ -48,7 +48,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-12">
                     <div class="painel">
                         <p id="saudacao"></p>
-                        <h1>PORTFOLIO</h1>
+                        <h1>Construindo Soluções em Código</h1>
                         <p>Sou Mateus, alguém que encontrou na tecnologia uma forma de criar, experimentar e inovar. Estou construindo minha jornada como desenvolvedor, transformando curiosidade em aprendizado e ideias em projetos.</p>
                         <a href="#projects" class="botao">Ver projetos</a>
                     </div>
@@ -67,8 +67,8 @@
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <div class="painel">
                         <div class="sobre-conteudo">
-                            <p>Sou Mateus, desenvolvedor em formação e graduando em <strong>Ciência da Computação</strong>, movido pela curiosidade de entender como os sistemas funcionam por baixo dos panos para resolver problemas reais.</p>
-                            <p>Atuo no ciclo completo de desenvolvimento: da engenharia de requisitos, prototipação e modelagem de bancos relacionais (<strong>MySQL</strong> e <strong>SQLite</strong>) até a criação de código limpo e interfaces em <strong>Python, JavaScript e Java</strong>.</p>
+                            <p>Sou Mateus, desenvolvedor em formação e graduando em <strong>Ciência da Computação - UDF</strong>, movido pela curiosidade de entender como os sistemas funcionam por baixo dos panos para resolver problemas reais.</p>
+                            <p>Atuo no ciclo completo de desenvolvimento: da engenharia de requisitos, prototipação e modelagem de bancos relacionais (<strong>MySQL</strong> e <strong>SQLite</strong>) até a criação de código limpo e interfaces em <strong>Python, JavaScript</strong>.</p>
                             <p>Também sou entusiasta de <strong>arquitetura de hardware</strong> e ambientes <strong>Linux</strong>, buscando sempre otimizar a máquina como um todo. Fora do terminal, exercito o pensamento estratégico e a antecipação de cenários no <strong>xadrez</strong>, habilidades que aplico diretamente nos meus projetos.</p>
                         </div>
                     </div>
@@ -82,7 +82,6 @@
                                 <div class="grade-habilidades">
                                     <div class="item-habilidade"><img src="img/python.png" alt="Ícone de Python" loading="lazy"><span>Python</span></div>
                                     <div class="item-habilidade"><img src="img/javascript.jpg" alt="Ícone de JavaScript" loading="lazy"><span>JavaScript</span></div>
-                                    <div class="item-habilidade"><img src="img/java.png" alt="Ícone de Java" loading="lazy"><span>Java</span></div>
                                     <div class="item-habilidade"><img src="img/c.png" alt="Ícone da linguagem C" loading="lazy"><span>C</span></div>
                                 </div>
                             </div>
@@ -115,22 +114,28 @@
 
         <section id="projects" class="container">
             <h2>Projetos</h2>
+            <div class="filtros">
+                <button type="button" class="botao-filtro ativo" data-filtro="todos">Todos</button>
+                <button type="button" class="botao-filtro" data-filtro="python">Python</button>
+                <button type="button" class="botao-filtro" data-filtro="c">C</button>
+                <button type="button" class="botao-filtro" data-filtro="sql">SQL</button>
+            </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12 projeto" data-tec="python sql">
                     <div class="painel">
                         <h3>Gestão de estoque</h3>
                         <p>Sistema de gerenciamento de estoque em Python e SQLite, com cadastro e controle completos.</p>
                         <a href="https://github.com/m4teusCruz/Gest-o-de-estoque" target="_blank" class="botao">Ver repositório</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12 projeto" data-tec="c">
                     <div class="painel">
                         <h3>Gerenciador acadêmico</h3>
                         <p>Sistema em C no terminal: cadastro de até 50 alunos, médias, aprovados e reprovados, busca e ordenação.</p>
                         <a href="https://github.com/m4teusCruz/gerenciador-academico-c" target="_blank" class="botao">Ver repositório</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="col-lg-4 col-md-12 col-sm-12 projeto" data-tec="sql">
                     <div class="painel">
                         <h3>Banco de biblioteca</h3>
                         <p>8 tabelas normalizadas, trigger contra empréstimo duplicado, stored procedure e 20 consultas SQL.</p>
@@ -183,7 +188,8 @@
                                 <input type="email" id="email" class="form-control">
                             </label>
                             <label>Mensagem
-                                <textarea id="mensagem" rows="4" class="form-control"></textarea>
+                                <textarea id="mensagem" rows="4" maxlength="300" class="form-control"></textarea>
+                                <small id="contador" class="contador">0/300 caracteres</small>
                             </label>
                             <button type="submit" class="botao">Enviar</button>
                         </form>
@@ -208,7 +214,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Todos os Direitos Reservados | Desenvolvido por: Mateus Cruz</p>
+        <p>&copy; 2026 Todos os Direitos Reservados | Desenvolvido por | Mateus Cruz</p>
     </footer>
 
     <script src="js/script.js" type="text/javascript"></script>

@@ -25,6 +25,7 @@ document.getElementById("formContato").addEventListener("submit", function (even
     } else {
         alert("Obrigado, " + nome + "! Sua mensagem foi enviada.");
         this.reset();
+        contador.textContent = textoContador("", 300);
     }
 });
 
@@ -43,4 +44,44 @@ links.forEach(function (link) {
     link.addEventListener("click", function () {
         menu.classList.remove("show");
     });
+});
+
+// Função 1: filtrar projetos por tecnologia (laço for + if)
+function filtrarProjetos(tecnologia) {
+    let projetos = document.querySelectorAll(".projeto");
+
+    for (let i = 0; i < projetos.length; i++) {
+        let tecnologias = projetos[i].dataset.tec.split(" ");
+
+        if (tecnologia === "todos" || tecnologias.includes(tecnologia)) {
+            projetos[i].style.display = "";
+        } else {
+            projetos[i].style.display = "none";
+        }
+    }
+}
+
+let botoesFiltro = document.querySelectorAll(".botao-filtro");
+
+botoesFiltro.forEach(function (botao) {
+    botao.addEventListener("click", function () {
+        filtrarProjetos(botao.dataset.filtro);
+
+        botoesFiltro.forEach(function (outro) {
+            outro.classList.remove("ativo");
+        });
+        botao.classList.add("ativo");
+    });
+});
+
+// Função 2: contador de caracteres da mensagem de contato
+function textoContador(texto, limite) {
+    return texto.length + "/" + limite + " caracteres";
+}
+
+let campoMensagem = document.getElementById("mensagem");
+let contador = document.getElementById("contador");
+
+campoMensagem.addEventListener("input", function () {
+    contador.textContent = textoContador(campoMensagem.value, 300);
 });
