@@ -61,7 +61,7 @@ O site é publicado pelo **GitHub Pages**, a partir da branch `main`, na pasta r
 
 - Fonte [JetBrains Mono](https://www.jetbrains.com/lp/mono/), licença OFL.
 - [Bootstrap](https://getbootstrap.com/), usado apenas pelo CSS.
-- Imagens, stickers e GIFs de animes e mangás pertencem aos seus respectivos criadores e são usados aqui só de forma ilustrativa.
+- Imagens, stickers e GIFs de animes e mangás usados aqui só de forma ilustrativa.
 
 ## Autor
 
