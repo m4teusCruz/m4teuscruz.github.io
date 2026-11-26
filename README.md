@@ -55,7 +55,7 @@ Se preferir um servidor local, abra o terminal na pasta do projeto e rode `pytho
 
 ## Publicação
 
-O site é publicado pelo **GitHub Pages**, a partir da branch `main`, na pasta raiz (`/ (root)`). Para atualizar, basta enviar os arquivos alterados e fazer o commit. O site se atualiza sozinho em 1 a 2 minutos.
+O site é publicado pelo **GitHub Pages**, a partir da branch `main`, na pasta raiz (`/ (root)`)
 
 ## Créditos
 
