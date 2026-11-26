@@ -65,6 +65,6 @@ O site é publicado pelo **GitHub Pages**, a partir da branch `main`, na pasta r
 
 ## Autor
 
-**Mateus Cruz**
+**Mateus Gonçalves da Cruz**
 
 - GitHub: [m4teusCruz](https://github.com/m4teusCruz)
