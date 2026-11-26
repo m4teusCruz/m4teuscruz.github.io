@@ -246,6 +246,20 @@ header {
     margin-top: 14px;
 }
 
+.galeria-mangas figure {
+    min-width: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.galeria-mangas figcaption {
+    margin-top: 7px;
+    color: inherit;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .02em;
+}
+
 .galeria-mangas img {
     display: block;
     width: 100%;
